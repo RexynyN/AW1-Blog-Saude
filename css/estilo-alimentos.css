@@ -1,0 +1,38 @@
+
+.alimentos ul{
+    list-style-type: circle;
+    font-size: 1em;
+    color: #777;
+    padding: 0px 0px 0px 20px;
+    text-align: justify;
+    margin-bottom: 1.5%;
+}
+
+.negrito{
+    font-weight: bold;
+}
+
+.container-tabela{
+    overflow-x:auto;
+}
+.container-tabela table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd; 
+  }
+  
+.container-tabela table th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1em;
+    color: #777;
+  }
+
+.container-tabela table th{
+    font-weight: bold;
+}
+
+

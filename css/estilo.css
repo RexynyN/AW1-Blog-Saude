@@ -1,0 +1,311 @@
+﻿/* RESET E HELPERS*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 1.75em; color: #333;  
+    margin-bottom: 15px;
+}
+
+h2{
+    font-size: 1.5em; 
+    color: #777;  
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h3{
+    font-size: 1.25em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 1.5%;
+    text-align: justify;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    width: 100%;
+    padding: 0px 8%;
+    float:left;
+    background: linear-gradient(to right,  rgb(9, 94, 16), rgb(66, 190, 149));
+}
+
+
+/* MENU */
+.nav-menu{
+    background-color: #111;
+}
+
+.menu{
+    width: 100%;
+    float:left;
+    background-color: #111;
+    padding: 0px 8%;
+}
+
+.menu ul{
+    position: relative;
+}
+
+.menu ul li{
+    width:150px;
+    float:left;
+}
+
+.menu a{
+    padding: 21px;
+    display:block;
+    background-color: #111;
+    color: #999;
+    font-size: 1.1em;
+}
+
+.menu ul ul{
+    position: absolute;
+    visibility: hidden;
+}
+
+.menu ul li:hover ul{
+    visibility: visible;
+}
+
+.menu a:hover{
+    color: white;
+}
+
+.menu ul ul li{
+    float: none; 
+}
+
+.menu ul ul li a{
+    background-color: white;
+    color:#111;
+    border-radius: 10px;
+    border-bottom: solid 1px #111;
+}
+
+.menu ul ul li a:hover{
+    background-color: green;
+}
+
+.nav-menu label[for="btn-menu"]{
+    padding: 5px;
+    background-color: #111;
+    color:white;
+    text-align:center;
+    font-size:30px;
+    cursor:pointer;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.nav-menu #btn-menu{
+    display: none;
+}
+
+/*PRINCIPAL*/
+.principal {
+    width: 100%;
+    float: left;
+    padding: 20px 8%;
+}
+
+.conteudo {
+    width: 70%;
+    float:left;
+    padding: 0 20px 20px 0;
+}
+
+/* SIDEBAR */
+.onde-estamos{
+    width: 30%;
+    float:right;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.onde-estamos h2{
+    margin-bottom: 5px;
+}
+
+.onde-estamos iframe{
+    width: 100%;
+    height: 250px;
+    margin: 20px 0;
+}
+
+.onde-estamos li {
+    color:#777;
+    margin-bottom: 10px;
+}
+
+.onde-estamos i{
+    margin-right: 5px;
+}
+
+/* NEWSLETTER */
+.newsletter {
+    width: 100%;
+    float: left;
+    background-color: #111;
+    padding: 50px 8%; 
+}
+
+.newsletter h3{
+    font-size: 1.8em; color: white;
+}
+
+.newsletter p{
+    font-size: 1.2em; color: white;
+}
+
+.newsletter form{
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.newsletter form input{
+    width: 80%;
+    margin-right: 1%;
+    padding: 15px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    float:left;
+    color:white;
+    background-color: initial;
+}
+
+.newsletter button{
+    width: 18%;
+    background-color: white;;
+    padding: 15px 10px;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+/* RODAPÉ */
+    .rodape{
+    background: linear-gradient(to right, rgb(9, 94, 16), rgb(66, 190, 149));
+    width: 100%;
+    float: left;
+    padding: 3% 4%;
+    text-align: center;
+    }
+.social-icons a{
+    font-size: 1.5em;
+    color: rgba(255,255,255,0.7);
+    margin-right: 3%;
+}
+
+.social-icons a:last-child{
+    margin-right: 0;
+}
+.social-icons a:hover{
+    color: rgba(255,255,255);
+}
+
+.copyright{
+    margin-top: 2%;
+    color: rgba(255,255,255,0.7);
+    text-align:center;
+}
+
+/*BREAKPOINTS*/
+@media (max-width: 940px) {
+    /*CABECALHO*/
+    .cabecalho img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+     }
+    
+     /*MENU*/
+    .nav-menu label[for="btn-menu"]{
+        display: block;
+    }
+    .nav-menu #btn-menu{
+        display: block;
+        visibility: hidden;
+    }
+    .nav-menu #btn-menu:checked ~ .menu{
+        margin-left:0;
+    }
+    .menu{
+        margin-left: -100%;
+        background-color: #222;
+    }
+    .menu ul li{
+        width: 100%;
+        float:none;
+    }
+    .menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+    }
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+    .menu a{
+        background-color: #222;
+        text-align: center;
+    }
+
+    /*CARDS */
+    .card-teste{
+        width: auto;
+    }
+    
+    .teste-gasto-calorico{
+        float: left;
+    }
+    
+}
+
+@media (max-width: 1150px) {
+    /*PRINCIPAL*/
+    .conteudo{
+        width: 100%;
+        float: left;
+    }
+    .onde-estamos{
+        width: 100%;
+        float: left;
+    }
+}
