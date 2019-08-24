@@ -1,0 +1,47 @@
+form[name="teste"]{
+    width: 60%;
+    border: 1px solid lightgrey;
+    margin: 0% 20% 1.5% 20%;
+    padding: 2% 5%;
+    background-color: rgb(234, 240, 242);
+}
+input[type=text], input[type=radio]{
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+input[type=text]{
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=button] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=button]:hover {
+    background-color: #45a049;
+}
+
+form p{
+    color: #111;
+}
+
+@media (max-width: 650px){
+    form[name="teste"]{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}

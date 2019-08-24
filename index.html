@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<title> Mais Saúde - Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1">
+	<meta name="description" content="Página pessoal do médico Drauzio Varella">
+	<meta name="keywords" content="Mais Saude">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Gustavo Bauer, Gabriel Alzani e Breno Nogueira">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/estilo-home.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="icon" href="img/icon.jpg">
+</head>
+
+<body>
+	<!-- CABEÇALHO -->
+	<header class="cabecalho">
+		<a href="index.html" title="Mais Saude"> <img src="img/logo.png" alt="logo"></a>
+	</header>
+
+	<!-- BARRA DE MENU-->
+	<nav class="nav-menu">
+		<input type="checkbox" id="btn-menu">
+		<label for="btn-menu">&#9776;</label>
+		<div class="menu">
+			<ul>
+				<li> <a href="index.html"> Home </a></li>
+				<li> <a href="dicas.html"> Dicas </a></li>
+				<li> <a href="alimentos.html"> Alimentos </a></li>
+				<li> <a href="#"> Testes </a>
+					<ul>
+						<li> <a href="imc.html"> IMC </a> </li>
+						<li> <a href="gasto-calorico.html"> Gasto Calórico </a> </li>
+					</ul>
+				</li>
+				<li> <a href="sobre.html"> Sobre </a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- MAIN -->
+	<main class="principal">
+		<!-- TEXTO CENTRAL -->
+		<article class="conteudo home">
+			<h1>Home</h1>
+			<p>
+				Seja bem-vindo ao meu site pessoal! Me chamo Drauzio Varela, atuo na área médica e também já
+				participei de diversos programas na TV.
+			</p>
+			<p>
+				No meu site, você poderá ter acesso à informações relacionadas à saúde com enfoque na parte de
+				nutrição.
+			</p>
+			<p>
+				Além de artigos completos, também disponibilizo testes e calculadoras. Confira:
+			</p>
+			<div class="container-teste">
+				<a href="imc.html">
+					<div class="card-teste teste-imc">
+						<img src="img/card-imc.png" alt="teste imc">
+						<p>O índice de massa corporal (IMC) é uma medida internacional usada para calcular se uma pessoa
+							está no
+							peso ideal.</p>
+					</div>
+				</a>
+				<a href="gasto-calorico.html">
+					<div class="card-teste teste-gasto-calorico">
+						<img src="img/card-gasto-calorico.png" alt="teste imc">
+						<p>O gasto calórico basal é a quantidade de energia que o organismo gasta mesmo estando
+							descansando
+							ou dormindo. </p>
+					</div>
+				</a>
+			</div>
+			<p>Possui interesse em conhecer mais sobre mim e minhas experiências na área médica? Então, <a
+					href="sobre.html"><span class="texto-azul">clique aqui!</span></a></p>
+		</article>
+		<!-- ASIDE -->
+		<aside class="onde-estamos">
+			<h2> Onde estamos</h2>
+			<p> Rua Andaçu, 6 - Vila Paiva, São Paulo - SP</p>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.8614819384006!2d-46.61238228440783!3d-23.50149826527081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef61e2af45dab%3A0x41e54de6c4cf041e!2sRua+Anda%C3%A7u%2C+6+-+Vila+Paiva%2C+S%C3%A3o+Paulo+-+SP%2C+02073-070!5e0!3m2!1spt-BR!2sbr!4v1559677760895!5m2!1spt-BR!2sbr"></iframe>
+			<h2> Contatos</h2>
+			<ul>
+				<li><i class="fas fa-phone fa-lg"></i>(73) 1234567890</li>
+				<li><i class="fab fa-whatsapp fa-lg"></i>(11) 983964286</li>
+				<li><i class="fas fa-envelope fa-lg"></i>dvarella@gmail.com</li>
+			</ul>
+		</aside>
+	</main>
+
+	<!-- NEWSLETTER -->
+	<section class="newsletter">
+		<h3> Ficou curioso? </h3>
+		<p>Inscreva-se para receber mais dicas! </p>
+		<form>
+			<input type="email" placeholder="Seu email">
+			<button>Ir!</button>
+		</form>
+	</section>
+
+	<!-- RODAPÉ-->
+	<footer class="rodape">
+		<div class="social-icons">
+			<a href="https://pt-br.facebook.com/drauziovarella/" target="_blank"><i class="fab fa-facebook"></i></a>
+			<a href="https://twitter.com/drauziovarella?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+				target="_blank"><i class="fab fa-twitter"></i></a>
+			<a href="https://www.instagram.com/sitedrauziovarella/?hl=pt-br" target="_blank"><i
+					class="fab fa-instagram"></i></a>
+		</div>
+		<p class="copyright">
+			Copyright © Mais Saúde 2019. Todos os direitos reservados.
+		</p>
+	</footer>
+
+</body>
+
+</html>

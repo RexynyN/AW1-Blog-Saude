@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title> Mais Saúde - Gasto Calórico</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <meta name="description" content="Página pessoal do médico Drauzio Varella">
+    <meta name="keywords" content="Mais Saude">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Gustavo Bauer, Gabriel Alzani e Breno Nogueira">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo-gasto-calorico.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="icon" href="img/icon.jpg">
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <a href="index.html" title="Mais Saude"> <img src="img/logo.png" alt="logo"></a>
+    </header>
+
+    <!-- BARRA DE MENU-->
+    <nav class="nav-menu">
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu">&#9776;</label>
+        <div class="menu">
+            <ul>
+                <li> <a href="index.html"> Home </a></li>
+                <li> <a href="dicas.html"> Dicas </a></li>
+                <li> <a href="alimentos.html"> Alimentos </a></li>
+                <li> <a href="#"> Testes </a>
+                    <ul>
+                        <li> <a href="imc.html"> IMC </a> </li>
+                        <li> <a href="gasto-calorico.html"> Gasto Calórico </a> </li>
+                    </ul>
+                </li>
+                <li> <a href="sobre.html"> Sobre </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="principal">
+        <!-- TEXTO CENTRAL -->
+        <article class="conteudo gasto-calorico">
+            <h1>Gasto Calórico</h1>
+            <p>
+                O gasto calórico basal é a quantidade de energia que o organismo gasta mesmo estando descansando ou
+                dormindo. Aqui você fica sabendo a quantidade mínima de calorias que deve ingerir por dia para
+                satisfazer as
+                necessidades do corpo.
+            </p>
+            <form name="teste">
+                <p>
+                    Sexo: <br>
+                    <label><input type="radio" name="sexo" value="m"> Masculino </label>
+                    <label><input type="radio" name="sexo" value="f"> Feminino </label>
+                </p>
+                <p>
+                    <label>
+
+                        Peso (kg): <br>
+                        <input type="text" name="peso" placeholder="80.1">
+
+                    </label>
+                </p>
+                <p>
+                    <label>
+
+                        Altura (m): <br>
+                        <input type="text" name="altura" placeholder="1.80">
+
+                    </label>
+                </p>
+
+                <p>
+                    <label> Idade (anos): <br>
+                        <input type="text" name="idade" placeholder="35">
+                    </label>
+                </p>
+
+                <input type="button" value="Calcular!" onclick="calcular()">
+            </form>
+            <script>
+                function calcular() {
+                    var peso = parseFloat(document.teste.peso.value);
+                    var altura = parseFloat(document.teste.altura.value);
+                    var idade = parseFloat(document.teste.idade.value);
+                    if (document.teste.sexo.value == "m") {
+                        resultado = 655 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade);
+                    } else if (document.teste.sexo.value == "f") {
+                        resultado = 66 + (13.7 * peso) + (5 * altura) - (6.5 * idade)
+                    }
+                    alert("Gasto calórico: " + resultado + " calorias!");
+                }
+            </script>
+        </article>
+        <!-- ASIDE -->
+        <aside class="onde-estamos">
+            <h2> Onde estamos</h2>
+            <p> Rua Andaçu, 6 - Vila Paiva, São Paulo - SP</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.8614819384006!2d-46.61238228440783!3d-23.50149826527081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef61e2af45dab%3A0x41e54de6c4cf041e!2sRua+Anda%C3%A7u%2C+6+-+Vila+Paiva%2C+S%C3%A3o+Paulo+-+SP%2C+02073-070!5e0!3m2!1spt-BR!2sbr!4v1559677760895!5m2!1spt-BR!2sbr"></iframe>
+            <h2> Contatos</h2>
+            <ul>
+                <li><i class="fas fa-phone fa-lg"></i>(73) 1234567890</li>
+                <li><i class="fab fa-whatsapp fa-lg"></i>(11) 983964286</li>
+                <li><i class="fas fa-envelope fa-lg"></i>dvarella@gmail.com</li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <h3> Ficou curioso? </h3>
+        <p>Inscreva-se para receber mais dicas! </p>
+        <form>
+            <input type="email" placeholder="Seu email">
+            <button>Ir!</button>
+        </form>
+    </section>
+
+    <!-- RODAPÉ-->
+    <footer class="rodape">
+        <div class="social-icons">
+            <a href="https://pt-br.facebook.com/drauziovarella/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/drauziovarella?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/sitedrauziovarella/?hl=pt-br" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+        <p class="copyright">
+            Copyright © Mais Saúde 2019. Todos os direitos reservados.
+        </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title> Mais Saúde - IMC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <meta name="description" content="Página pessoal do médico Drauzio Varella">
+    <meta name="keywords" content="Mais Saude">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Gustavo Bauer, Gabriel Alzani e Breno Nogueira">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo-imc.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="icon" href="img/icon.jpg">
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <a href="index.html" title="Mais Saude"> <img src="img/logo.png" alt="logo"></a>
+    </header>
+
+    <!-- BARRA DE MENU-->
+    <nav class="nav-menu">
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu">&#9776;</label>
+        <div class="menu">
+            <ul>
+                <li> <a href="index.html"> Home </a></li>
+                <li> <a href="dicas.html"> Dicas </a></li>
+                <li> <a href="alimentos.html"> Alimentos </a></li>
+                <li> <a href="#"> Testes </a>
+                    <ul>
+                        <li> <a href="imc.html"> IMC </a> </li>
+                        <li> <a href="gasto-calorico.html"> Gasto Calórico </a> </li>
+                    </ul>
+                </li>
+                <li> <a href="sobre.html"> Sobre </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="principal">
+        <!-- TEXTO CENTRAL -->
+        <article class="conteudo imc">
+            <h1>IMC</h1>
+            <p>
+                A classificação do índice de massa corporal (IMC), pode ajudar a identificar obesidade ou desnutrição em
+                crianças, adolescentes, adultos e idosos.
+                Essa calculadora informa o seu IMC. Não esqueça de comparar o resultado obtido com a tabela no final da
+                página para saber se está no peso ideal.
+            </p>
+
+            <form name="teste">
+                <p>
+                    <label>
+
+                        Peso (kg): <br>
+                        <input type="text" name="peso" placeholder="80.1">
+
+                    </label>
+                </p>
+                <p>
+                    <label>
+
+                        Altura (m): <br>
+                        <input type="text" name="altura" placeholder="1.80">
+
+                    </label>
+                </p>
+                <input type="button" value="Calcular!" onclick="calcular()">
+            </form>
+
+            <div class="container-tabela">
+                <table>
+                    <tr>
+                        <th>Resultado</th>
+                        <th>Situação</th>
+                    </tr>
+                    <tr>
+                        <td>Abaixo de 17</td>
+                        <td>Muito abaixo do peso</td>
+                    </tr>
+                    <tr>
+                        <td>Entre 17 e 18,49</td>
+                        <td>Abaixo do peso</td>
+                    </tr>
+                    <tr>
+                        <td>Entre 18,5 e 24,99</td>
+                        <td>Peso normal</td>
+                    </tr>
+                    <tr>
+                        <td>Entre 25 e 29,99</td>
+                        <td>Acima do peso</td>
+                    </tr>
+                    <tr>
+                        <td>Entre 30 e 34,99</td>
+                        <td>Obesidade I</td>
+                    </tr>
+                    <tr>
+                        <td>Entre 35 e 39,99</td>
+                        <td>Obesidade II (severa)</td>
+                    </tr>
+                    <tr>
+                        <td>Acima de 40</td>
+                        <td>Obesidade III (mórbida)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <script>
+                function calcular() {
+                    var peso = parseFloat(document.teste.peso.value);
+                    var altura = parseFloat(document.teste.altura.value);
+                    var resultado = (peso / (altura * altura));
+                    alert("Seu IMC é " + resultado + "!");
+                }
+            </script>
+        </article>
+        <!-- ASIDE -->
+        <aside class="onde-estamos">
+            <h2> Onde estamos</h2>
+            <p> Rua Andaçu, 6 - Vila Paiva, São Paulo - SP</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.8614819384006!2d-46.61238228440783!3d-23.50149826527081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef61e2af45dab%3A0x41e54de6c4cf041e!2sRua+Anda%C3%A7u%2C+6+-+Vila+Paiva%2C+S%C3%A3o+Paulo+-+SP%2C+02073-070!5e0!3m2!1spt-BR!2sbr!4v1559677760895!5m2!1spt-BR!2sbr"></iframe>
+            <h2> Contatos</h2>
+            <ul>
+                <li><i class="fas fa-phone fa-lg"></i>(73) 1234567890</li>
+                <li><i class="fab fa-whatsapp fa-lg"></i>(11) 983964286</li>
+                <li><i class="fas fa-envelope fa-lg"></i>dvarella@gmail.com</li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <h3> Ficou curioso? </h3>
+        <p>Inscreva-se para receber mais dicas! </p>
+        <form>
+            <input type="email" placeholder="Seu email">
+            <button>Ir!</button>
+        </form>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="social-icons">
+            <a href="https://pt-br.facebook.com/drauziovarella/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/drauziovarella?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/sitedrauziovarella/?hl=pt-br" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+        <p class="copyright">
+            Copyright © Mais Saúde 2019. Todos os direitos reservados.
+        </p>
+    </footer>
+
+</body>
+
+</html>

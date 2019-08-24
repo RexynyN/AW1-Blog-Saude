@@ -1,0 +1,12 @@
+Link do site com jquery:
+
+https://mgl7bn3hs8k2zhedjf1pmg-on.drv.tw/www.Projeto%20AW1%20Final%202bim/
+
+
+
+Link do site sem jquery:
+
+https://mgl7bn3hs8k2zhedjf1pmg-on.drv.tw/www.Projeto%20AW1%20Final%202bim%20SEM%20JQUERY/
+
+Site usado para obter o site: https://drv.tw/
+Como usar: https://www.youtube.com/watch?v=qtQ9TvQLKjc

@@ -1,0 +1,40 @@
+.home .container-teste{
+    width: 100%;
+    float: left;
+}
+.home .card-teste{
+    max-width:764px;
+    max-height:500px;
+    width: 46%;
+    border: 1px solid lightgrey;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1.5%;
+}
+
+.home .card-teste p{
+    padding: 1px 4%;
+}
+
+.home .teste-imc{
+    float: left;
+}
+
+.home .teste-gasto-calorico{
+    float: right;
+}
+
+.texto-azul{
+    color: blue;
+}
+
+@media (max-width: 880px) {
+    .home .card-teste{
+        width: auto;
+    }
+    
+    .home .teste-gasto-calorico{
+        float: left;
+    }
+    
+}
